@@ -1,0 +1,9 @@
+package: github.com/Valutac/neov
+import:
+- package: github.com/BurntSushi/toml
+- package: git.openstack.org/openstack/golang-client
+  repo: git@github.com:openstack/golang-client.git
+  vcs: git
+- package: github.com/olekukonko/tablewriter
+- package: github.com/briandowns/spinner
+  version: ^1.0.0

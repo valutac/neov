@@ -1,0 +1,29 @@
+hash: 19709cc42e82ca5c5b7a133eb9b5fb99652739d9254a88c2f0f9903c1d19a048
+updated: 2017-12-19T13:43:01.244858+07:00
+imports:
+- name: git.openstack.org/openstack/golang-client
+  version: f8471e433432b26dd29aa1c1cd42317a9d79a551
+  repo: git@github.com:openstack/golang-client.git
+  vcs: git
+- name: github.com/briandowns/spinner
+  version: 48dbb65d7bd5c74ab50d53d04c949f20e3d14944
+- name: github.com/BurntSushi/toml
+  version: b26d9c308763d68093482582cea63d69be07a0f0
+- name: github.com/fatih/color
+  version: 570b54cabe6b8eb0bc2dfce68d964677d63b5260
+- name: github.com/mattn/go-colorable
+  version: 5411d3eea5978e6cdc258b30de592b60df6aba96
+  repo: https://github.com/mattn/go-colorable
+- name: github.com/mattn/go-isatty
+  version: 57fdcb988a5c543893cc61bce354a6e24ab70022
+  repo: https://github.com/mattn/go-isatty
+- name: github.com/mattn/go-runewidth
+  version: 97311d9f7767e3d6f422ea06661bc2c7a19e8a5d
+- name: github.com/olekukonko/tablewriter
+  version: 65fec0d89a572b4367094e2058d3ebe667de3b60
+- name: golang.org/x/sys
+  version: e24f485414aeafb646f6fca458b0bf869c0880a1
+  repo: https://go.googlesource.com/sys
+  subpackages:
+  - unix
+testImports: []
