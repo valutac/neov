@@ -11,7 +11,7 @@ import (
 )
 
 func main() {
-	fmt.Println("neov: neo-cli by Valutac\n")
+	fmt.Println("neov: neocloud toolkit by Valutac\n")
 	log.SetFlags(log.Lshortfile)
 	usr, err := user.Current()
 	if err != nil {
