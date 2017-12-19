@@ -43,7 +43,7 @@ func (srv *service) GetServers(projectID string) []Server {
 	}
 
 	var response struct {
-		servers []Server
+		Servers []Server
 	}
 	if err := json.NewDecoder(resp.Body).Decode(&response); err != nil {
 		log.Fatal(err)
@@ -51,7 +51,7 @@ func (srv *service) GetServers(projectID string) []Server {
 
 	// fmt.Printf("Got %d Compute Engine\n", len(response.servers))
 	s.Stop()
-	return response.servers
+	return response.Servers
 }
 
 func DisplayServerList(servers []Server) {
