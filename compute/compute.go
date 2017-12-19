@@ -57,16 +57,19 @@ func (srv *service) GetServers(projectID string) []Server {
 func DisplayServerList(servers []Server) {
 	data := [][]string{}
 	for _, server := range servers {
-		current := []string{server.ID, server.Name, server.Status, server.HostStatus}
+		current := []string{server.ID, server.Name, server.Status}
 		if server.Flavor != nil {
 			current = append(current, strconv.Itoa(server.Flavor.RAM))
 			current = append(current, strconv.Itoa(server.Flavor.VCPUs))
+		} else {
+			current = append(current, []string{"", ""}...)
 		}
+		current = append(current, server.Created.String())
 		data = append(data, current)
 	}
 
 	table := tablewriter.NewWriter(os.Stdout)
-	table.SetHeader([]string{"Compute ID", "Name", "Status", "Host Status", "RAM", "vCPUs"})
+	table.SetHeader([]string{"Compute ID", "Name", "Status", "RAM", "vCPUs", "Created"})
 	table.SetBorders(tablewriter.Border{Left: true, Top: false, Right: true, Bottom: false})
 	table.SetCenterSeparator("|")
 	table.AppendBulk(data)

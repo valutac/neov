@@ -1,5 +1,7 @@
 package compute
 
+import "time"
+
 type Flavor struct {
 	Disk       int
 	Ephemeral  int
@@ -20,10 +22,12 @@ type Link struct {
 }
 
 type Server struct {
-	ID         string  `json:"id"`
-	Name       string  `json:"name"`
-	Links      []Link  `json:"links"`
-	Flavor     *Flavor `json:"flavor,omitempty"`
-	Status     string  `json:"status"`
-	HostStatus string  `json:"host_status"`
+	ID         string    `json:"id"`
+	Name       string    `json:"name"`
+	Links      []Link    `json:"links"`
+	Flavor     *Flavor   `json:"flavor,omitempty"`
+	Status     string    `json:"status"`
+	HostStatus string    `json:"host_status"`
+	VMState    string    `json:"OS-EXT-STS:vm_state"`
+	Created    time.Time `json:"created"`
 }
